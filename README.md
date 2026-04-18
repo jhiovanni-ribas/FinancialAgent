@@ -19,7 +19,7 @@ Os assistentes virtuais financeiros estão evoluindo de chatbots reativos para a
 
 ### 1. Documentação do Agente: FinOps Advisor
 
-Defina **o que** seu agente faz e **como** ele funciona:
+Abaixo estão as **definições** do Projeto:
 
 - **Caso de Uso:** Assistente de voz para profissionais de LegalOps que realiza consultas "mãos-livres" em bases de dados financeiras e perfis de investimento.
 - **Persona e Tom de Voz:** Atua como um **Controller Sênior**, utilizando um tom executivo, técnico e pedagógico, focado em respostas curtas para áudio.
