@@ -5,39 +5,39 @@
 ### Problema
 > Qual problema financeiro seu agente resolve?
 
-[Sua descrição aqui]
+Profissionais de áreas críticas (como Direito e Finanças) perdem tempo navegando em dashboards complexos para obter métricas simples. A latência entre a necessidade da informação e a consulta manual reduz a produtividade.
 
 ### Solução
 > Como o agente resolve esse problema de forma proativa?
 
-[Sua descrição aqui]
+Um agente de voz proativo que utiliza RAG (Retrieval-Augmented Generation) para consultar bases de dados financeiras (.csv e .json) e entregar insights instantâneos por voz acelerada (1.5x), antecipando alertas de orçamento.
 
 ### Público-Alvo
 > Quem vai usar esse agente?
 
-[Sua descrição aqui]
+Advogados, gestores de LegalOps e investidores que necessitam de consulta de dados hands-free durante a rotina de trabalho.
 
 ---
 
 ## Persona e Tom de Voz
 
 ### Nome do Agente
-[Nome escolhido]
+FinOps Advisor
 
 ### Personalidade
 > Como o agente se comporta? (ex: consultivo, direto, educativo)
 
-[Sua descrição aqui]
+Consultivo, analítico e focado em conformidade. Comporta-se como um Controller Sênior.
 
 ### Tom de Comunicação
 > Formal, informal, técnico, acessível?
 
-[Sua descrição aqui]
+Executivo e direto. Evita redundâncias para otimizar a experiência de áudio.
 
 ### Exemplos de Linguagem
-- Saudação: [ex: "Olá! Como posso ajudar com suas finanças hoje?"]
-- Confirmação: [ex: "Entendi! Deixa eu verificar isso para você."]
-- Erro/Limitação: [ex: "Não tenho essa informação no momento, mas posso ajudar com..."]
+- Saudação: "Olá! Sou seu Advisor. Sistema pronto para consulta de dados financeiros e perfil."
+- Confirmação: "Entendido. Acessando sua base de transações agora."
+- Erro/Limitação: "Esta informação não consta na base de dados fornecida. Por segurança, prefiro não especular sobre esse valor."
 
 ---
 
@@ -47,22 +47,29 @@
 
 ```mermaid
 flowchart TD
-    A[Cliente] -->|Mensagem| B[Interface]
-    B --> C[LLM]
-    C --> D[Base de Conhecimento]
-    D --> C
-    C --> E[Validação]
-    E --> F[Resposta]
+    A[USUÁRIO] -->|Comando de Voz| B(Microfone + sounddevice)
+    B -->|Sinal Digital| C[Speech-to-Text: Google Recognition]
+    C -->|Prompt + Texto| D{Google Gemini LLM}
+    
+    subgraph Knowledge_Base [RAG: Base de Conhecimento]
+        E[(transacoes.csv)]
+        F[(perfil_investidor.json)]
+    end
+    
+    D <-->|Consulta de Dados| Knowledge_Base
+    D -->|Geração de Insight| G[Filtro de Validação/Segurança]
+    G -->|Texto Limpo| H[Text-to-Speech: pyttsx3]
+    H -->|Áudio 1.5x| I((Auto-falante))
 ```
 
 ### Componentes
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
+| Interface | Terminal Python com captação de áudio via sounddevice. |
+| LLM | Google Gemini API (modelo gemini-flash-latest). |
+| Base de Conhecimento | Arquivos transacoes.csv e perfil_investidor.json (Dados Mockados). |
+| Validação | Verificação de Grounding via System Prompt para evitar alucinações. |
 
 ---
 
@@ -70,12 +77,15 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] [ex: Agente só responde com base nos dados fornecidos]
-- [ ] [ex: Respostas incluem fonte da informação]
-- [ ] [ex: Quando não sabe, admite e redireciona]
-- [ ] [ex: Não faz recomendações de investimento sem perfil do cliente]
+- [ ] Restrição de Escopo: O agente é instruído via System Prompt a responder apenas com base nos dados do repositório local.
+- [ ] Admissão de Falha: Configurado para admitir quando um dado não está presente, redirecionando o usuário para o suporte humano ou canais oficiais.
+- [ ] Verificação de Perfil: O agente cruza a categoria da transação com o perfil_investidor.json antes de validar se um gasto é "adequado" ou não.
+
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
 
-[Liste aqui as limitações explícitas do agente]
+- O agente NÃO realiza transferências bancárias ou movimentações financeiras reais.
+- O agente NÃO faz recomendações de ativos de risco sem antes validar a política de tolerância no perfil do cliente.
+- O agente NÃO armazena chaves de API ou senhas do usuário no código-fonte (Segurança de Credenciais).
+
