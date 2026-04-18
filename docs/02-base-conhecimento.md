@@ -1,40 +1,32 @@
 # Base de Conhecimento
 
-## Dados Utilizados
-
-Descreva se usou os arquivos da pasta `data`, por exemplo:
+## ## Dados Utilizados
 
 | Arquivo | Formato | Utilização no Agente |
-|---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores |
-| `perfil_investidor.json` | JSON | Personalizar recomendações |
-| `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
-| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
+|---------|---------|----------------------|
+| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores para um atendimento contínuo. |
+| `perfil_investidor.json` | JSON | Personalizar recomendações e validar limites de risco conforme o perfil do cliente. |
+| `produtos_financeiros.json` | JSON | Sugerir serviços bancários e investimentos adequados ao portfólio do usuário. |
+| `transacoes.csv` | CSV | Analisar o fluxo de caixa, identificar padrões de gastos e alertar sobre limites. |
 
-> [!TIP]
-> **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
 
 ---
 
 ## Adaptações nos Dados
 
-> Você modificou ou expandiu os dados mockados? Descreva aqui.
-
-[Sua descrição aqui]
+Expandimos os dados mockados para incluir campos de "Categoria de Risco" no arquivo JSON e "Status de Urgência" no histórico de transações, permitindo que o agente priorize alertas de voz sobre gastos essenciais.
 
 ---
 
 ## Estratégia de Integração
 
 ### Como os dados são carregados?
-> Descreva como seu agente acessa a base de conhecimento.
 
-[ex: Os JSON/CSV são carregados no início da sessão e incluídos no contexto do prompt]
+Os arquivos são carregados na inicialização do sistema através da biblioteca Pandas (para CSVs) e json nativo. Eles permanecem em memória durante a sessão para garantir que a resposta de voz seja instantânea.
 
 ### Como os dados são usados no prompt?
-> Os dados vão no system prompt? São consultados dinamicamente?
 
-[Sua descrição aqui]
+Utilizamos uma estratégia de RAG Dinâmico: o script Python filtra as linhas mais relevantes da base de dados com base na pergunta do usuário e as injeta no contexto do Prompt do Gemini. Isso evita que o prompt fique muito longo e caro, mantendo o foco na dúvida atual.
 
 ---
 
@@ -44,12 +36,12 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 ```
 Dados do Cliente:
-- Nome: João Silva
-- Perfil: Moderado
-- Saldo disponível: R$ 5.000
+- Nome: César (Exemplo)
+- Perfil: Arrojado
+- Saldo disponível: R$ 12.500
 
 Últimas transações:
-- 01/11: Supermercado - R$ 450
-- 03/11: Streaming - R$ 55
+- 15/04: Investimento Ações - R$ 2.000
+- 17/04: Assinatura Software - R$ 150
 ...
 ```
