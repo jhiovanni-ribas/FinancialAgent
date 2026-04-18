@@ -1,6 +1,6 @@
 # Base de Conhecimento
 
-## ## Dados Utilizados
+## Dados Utilizados
 
 | Arquivo | Formato | Utilização no Agente |
 |---------|---------|----------------------|
