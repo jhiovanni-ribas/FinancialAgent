@@ -32,16 +32,16 @@ Abaixo estão as **definições** do Projeto:
 
 ### 2. Base de Conhecimento
 
-Utilize os **dados mockados** disponíveis na pasta [`data/`](./data/) para alimentar seu agente:
+Foi utilizado os seguintes **dados mockados** disponíveis na pasta [`data/`](./data/) para alimentar o agente:
 
-| Arquivo | Formato | Descrição |
-|---------|---------|-----------|
-| `transacoes.csv` | CSV | Histórico de transações do cliente |
-| `historico_atendimento.csv` | CSV | Histórico de atendimentos anteriores |
-| `perfil_investidor.json` | JSON | Perfil e preferências do cliente |
-| `produtos_financeiros.json` | JSON | Produtos e serviços disponíveis |
 
-Você pode adaptar ou expandir esses dados conforme seu caso de uso.
+| Arquivo | Formato | Utilização no Agente |
+|---------|---------|----------------------|
+| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores para um atendimento contínuo. |
+| `perfil_investidor.json` | JSON | Personalizar recomendações e validar limites de risco conforme o perfil do cliente. |
+| `produtos_financeiros.json` | JSON | Sugerir serviços bancários e investimentos adequados ao portfólio do usuário. |
+| `transacoes.csv` | CSV | Analisar o fluxo de caixa, identificar padrões de gastos e alertar sobre limites. |
+
 
 📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
 
