@@ -1,20 +1,21 @@
-# 🤖 Agente Financeiro Inteligente com IA Generativa
+# 🎙️ FinOps Advisor: Agente de Voz Inteligente para Finanças 🤖⚖️
+
+Este repositório contém o projeto final do Bootcamp de IA Generativa. Desenvolvemos um agente financeiro inteligente capaz de realizar consultas proativas por voz, utilizando técnicas avançadas de IA Generativa para auxiliar na tomada de decisão financeira com precisão e segurança.
+
 
 ## Contexto
 
-Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, você vai idealizar e prototipar um agente financeiro que utiliza IA Generativa para:
+Os assistentes virtuais financeiros estão evoluindo de chatbots reativos para agentes proativos. O FinOps Advisor foi projetado para:
 
-- **Antecipar necessidades** ao invés de apenas responder perguntas
-- **Personalizar** sugestões com base no contexto de cada cliente
-- **Cocriar soluções** financeiras de forma consultiva
-- **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
+**Antecipar necessidades:** Analisar o histórico de transações para alertar sobre limites de orçamento.
+**Sugestões Personalizadas:** Cruzar perfis de investimento com dados financeiros para recomendações sob medida.
+**Interface Voice-First:** Otimizado para profissionais jurídicos e financeiros que precisam de acesso a dados sem usar as mãos.
+**Anti-Alucinação:** Implementa um controle rígido de grounding utilizando apenas bases de dados locais.
 
 > [!TIP]
 > Na pasta [`examples/`](./examples/) você encontra referências de implementação para cada etapa deste desafio.
 
 ---
-
-## O Que Você Deve Entregar
 
 ### 1. Documentação do Agente
 
@@ -95,16 +96,16 @@ Grave um **pitch de 3 minutos** (estilo elevador) apresentando:
 
 ---
 
-## Ferramentas Sugeridas
+## 🛠️ Ferramentas Utilizadas
 
-Todas as ferramentas abaixo possuem versões gratuitas:
+Todas as ferramentas selecionadas para o **FinOps Advisor** possuem versões gratuitas ou são de código aberto:
 
 | Categoria | Ferramentas |
 |-----------|-------------|
-| **LLMs** | [ChatGPT](https://chat.openai.com/), [Copilot](https://copilot.microsoft.com/), [Gemini](https://gemini.google.com/), [Claude](https://claude.ai/), [Ollama](https://ollama.ai/) |
-| **Desenvolvimento** | [Streamlit](https://streamlit.io/), [Gradio](https://www.gradio.app/), [Google Colab](https://colab.research.google.com/) |
-| **Orquestração** | [LangChain](https://www.langchain.com/), [LangFlow](https://www.langflow.org/), [CrewAI](https://www.crewai.com/) |
-| **Diagramas** | [Mermaid](https://mermaid.js.org/), [Draw.io](https://app.diagrams.net/), [Excalidraw](https://excalidraw.com/) |
+| **LLM Engine** | [Gemini API](https://ai.google.dev/), [Google AI Studio](https://aistudio.google.com/) |
+| **Desenvolvimento** | [Python 3.14](https://www.python.org/), [VS Code](https://code.visualstudio.com/), [Pandas](https://pandas.pydata.org/) |
+| **Engenharia de Voz** | [SpeechRecognition](https://pypi.org/project/SpeechRecognition/), [pyttsx3](https://pypi.org/project/pyttsx3/), [SoundDevice](https://python-sounddevice.readthedocs.io/) |
+| **Diagramas** | [Mermaid](https://mermaid.js.org/), [Lucidchart](https://www.lucidchart.com/) |
 
 ---
 
