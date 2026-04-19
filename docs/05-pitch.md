@@ -41,4 +41,4 @@ O diferencial está na privacidade e na agilidade. Os dados não treinam a nuvem
 
 > Segue o Link:
 
-[Link do vídeo]
+[[Link do vídeo]](https://youtu.be/zGw3fzDNWm4)
