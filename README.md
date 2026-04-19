@@ -53,6 +53,10 @@ Documente os prompts que definem o comportamento do seu agente:
 
 - **Prompts do Agente:** Instruções estruturadas com Few-Shot Prompting e Grounding Estrito, garantindo que o agente atue como um Controller Sênior focado em precisão de dados.
 
+- **Engenharia de Voz (TTS Optmized):** Refinamento de prompts para saídas curtas e diretas, otimizadas para motores de síntese de voz, garantindo fluidez em áudio acelerado (1.5x).
+
+- **Tratamento de Exceções e Edge Cases:** Camada de segurança que blinda o agente contra perguntas fora do escopo financeiro e tentativas de acesso a dados sensíveis/senhas.
+
 📄 **Template:** [`docs/03-prompts.md`](./docs/03-prompts.md)
 
 ---
