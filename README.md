@@ -63,11 +63,13 @@ Documente os prompts que definem o comportamento do seu agente:
 
 ### 4. Aplicação Funcional
 
-Desenvolva um **protótipo funcional** do seu agente:
+**Protótipo funcional** de um Controller Digital capaz de realizar leitura de bases CSV/JSON, histórico de atendimento e automação de alertas financeiros via interação por voz:
 
-- Chatbot interativo (sugestão: Streamlit, Gradio ou similar)
-- Integração com LLM (via API ou modelo local)
-- Conexão com a base de conhecimento
+- **Ferramentas de Desenvolvimento:** Desenvolvimento em Python 3.14 utilizando as bibliotecas Pyttsx3 para voz, SpeechRecognition para transcrição e o modelo Gemini-Flash-Latest para inferência.
+  
+- **Integração de Dados:** Conexão nativa com a base de conhecimento local composta por arquivos CSV (transacoes.csv, historico_atendimento.csv) e JSON (perfil_investidor.json, produtos_financeiros.json).
+  
+- **Pipeline de Recuperação (RAG):** Implementação de lógica para extração e pré-processamento de dados em tempo real, permitindo que a LLM contextualize respostas com base no histórico de atendimento e portfólio de produtos do cliente.
 
 📁 **Pasta:** [`src/`](./src/)
 
