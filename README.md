@@ -51,9 +51,7 @@ Foi utilizado os seguintes **dados mockados** disponíveis na pasta [`data/`](./
 
 Documente os prompts que definem o comportamento do seu agente:
 
-- **System Prompt:** Instruções gerais de comportamento e restrições
-- **Exemplos de Interação:** Cenários de uso com entrada e saída esperada
-- **Tratamento de Edge Cases:** Como o agente lida com situações limite
+- **Prompts do Agente:** Instruções estruturadas com Few-Shot Prompting e Grounding Estrito, garantindo que o agente atue como um Controller Sênior focado em precisão de dados.
 
 📄 **Template:** [`docs/03-prompts.md`](./docs/03-prompts.md)
 
