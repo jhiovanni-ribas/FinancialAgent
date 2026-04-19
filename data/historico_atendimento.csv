@@ -1,6 +1,5 @@
-data,canal,tema,resumo,resolvido
-2025-09-15,chat,CDB,Cliente perguntou sobre rentabilidade e prazos,sim
-2025-09-22,telefone,Problema no app,Erro ao visualizar extrato foi corrigido,sim
-2025-10-01,chat,Tesouro Selic,Cliente pediu explicação sobre o funcionamento do Tesouro Direto,sim
-2025-10-12,chat,Metas financeiras,Cliente acompanhou o progresso da reserva de emergência,sim
-2025-10-25,email,Atualização cadastral,Cliente atualizou e-mail e telefone,sim
+id,data,usuario,mensagem_usuario,resposta_agente,contexto
+1,2026-04-15,César,"Como está meu plano de estudos para a OAB?","Você completou 57% das atividades previstas. Sugiro focar em Ética esta semana.","Produtividade"
+2,2026-04-16,César,"Qual o status da minha migração para LegalOps?","Já estruturamos seu dashboard no Notion e o script de automação em Python está funcional.","Carreira"
+3,2026-04-17,César,"Pode analisar meus gastos com lazer?","Notei um gasto de R$ 550,00 que excede seu alerta de R$ 500,00. Quer revisar seu orçamento?","Financeiro"
+4,2026-04-18,César,"Lembre-me de verificar os painéis solares.","Agendado. Notei que você já realizou uma manutenção preventiva ontem.","Casa"
