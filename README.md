@@ -12,9 +12,6 @@ Os assistentes virtuais financeiros estão evoluindo de chatbots reativos para a
 **Interface Voice-First:** Otimizado para profissionais jurídicos e financeiros que precisam de acesso a dados sem usar as mãos.
 **Anti-Alucinação:** Implementa um controle rígido de grounding utilizando apenas bases de dados locais.
 
-> [!TIP]
-> Na pasta [`examples/`](./examples/) você encontra referências de implementação para cada etapa deste desafio.
-
 ---
 
 ### 1. Documentação do Agente: FinOps Advisor
@@ -121,29 +118,30 @@ Todas as ferramentas selecionadas para o **FinOps Advisor** possuem versões gra
 ## Estrutura do Repositório
 
 ```
-📁 lab-agente-financeiro/
+📁 FinOpsAdvisor/
 │
-├── 📄 README.md
+├── 📄 README.md                      # Documentação principal do projeto
 │
-├── 📁 data/                          # Dados mockados para o agente
-│   ├── historico_atendimento.csv     # Histórico de atendimentos (CSV)
-│   ├── perfil_investidor.json        # Perfil do cliente (JSON)
-│   ├── produtos_financeiros.json     # Produtos disponíveis (JSON)
-│   └── transacoes.csv                # Histórico de transações (CSV)
+├── 📁 assets/                        # Recursos visuais e prints de execução
+│   ├── README.md                     # Documentação da pasta assets
+│   └── execucao.png                  # Print do Advisor em funcionamento
 │
-├── 📁 docs/                          # Documentação do projeto
-│   ├── 01-documentacao-agente.md     # Caso de uso e arquitetura
-│   ├── 02-base-conhecimento.md       # Estratégia de dados
-│   ├── 03-prompts.md                 # Engenharia de prompts
-│   ├── 04-metricas.md                # Avaliação e métricas
-│   └── 05-pitch.md                   # Roteiro do pitch
+├── 📁 data/                          # Base de conhecimento (RAG local)
+│   ├── historico_atendimento.csv     # Log de atendimentos anteriores
+│   ├── perfil_investidor.json        # Regras de perfil (Conservador/Arrojado)
+│   ├── produtos_financeiros.json     # Catálogo de ativos disponíveis
+│   └── transacoes.csv                # Registro real de gastos e receitas
 │
-├── 📁 src/                           # Código da aplicação
-│   └── app.py                        # (exemplo de estrutura)
+├── 📁 docs/                          # Documentação técnica detalhada
+│   ├── 01-documentacao-agente.md     # Arquitetura e Personas
+│   ├── 02-base-conhecimento.md       # Estratégia de dados e RAG
+│   ├── 03-prompts.md                 # System Prompts e Variáveis
+│   ├── 04-metricas.md                # Tabela de assertividade e métricas
+│   └── 05-pitch.md                   # Roteiro e link da apresentação
 │
-├── 📁 assets/                        # Imagens e diagramas
-│   └── ...
+├── 📁 src/                           # Código-fonte da aplicação
+│   ├── README.md                     # Instruções da pasta src
+│   └── main.py                       # Script principal (Lógica, RAG e Voz)
 │
-└── 📁 examples/                      # Referências e exemplos
-    └── README.md
+└── ⚙️ .gitignore                     # Proteção de ambiente virtual e chaves
 ```
