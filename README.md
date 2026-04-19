@@ -89,13 +89,17 @@ O desempenho do FinOps Advisor foi validado através de testes de estresse técn
 
 ---
 
-### 6. Pitch
+### 6. Pitch: A Revolução da Gestão Financeira por Voz
 
-Grave um **pitch de 3 minutos** (estilo elevador) apresentando:
+**FinOps Advisor: Como a Inteligência Artificial está libertando profissionais de elite das planilhas complexas.**
 
-- Qual problema seu agente resolve?
-- Como ele funciona na prática?
-- Por que essa solução é inovadora?
+Assista à nossa apresentação executiva de 3 minutos e descubra como transformamos dados estáticos em um consultor financeiro proativo:
+
+⚡ **Do Caos à Clareza em Segundos:** Veja como o César utiliza comandos de voz para obter diagnósticos precisos sobre seus gastos e investimentos, eliminando a barreira técnica entre o usuário e seus dados financeiros.
+
+🧠 **Inteligência com "Pé no Chão":** Entenda a arquitetura de RAG Local que permite à IA analisar extratos reais e perfis de investidor sem que as informações sensíveis saiam do ambiente controlado do usuário.
+
+🛡️ **O Futuro da Controladoria Pessoal:** Descubra por que o sistema de alertas automáticos para gastos acima de R$ 500,00 é o divisor de águas para manter a saúde financeira em dia durante transições de carreira desafiadoras.
 
 📄 **Template:** [`docs/05-pitch.md`](./docs/05-pitch.md)
 
@@ -143,13 +147,3 @@ Todas as ferramentas selecionadas para o **FinOps Advisor** possuem versões gra
 └── 📁 examples/                      # Referências e exemplos
     └── README.md
 ```
-
----
-
-## Dicas Finais
-
-1. **Comece pelo prompt:** Um bom system prompt é a base de um agente eficaz
-2. **Use os dados mockados:** Eles garantem consistência e evitam problemas com dados sensíveis
-3. **Foque na segurança:** No setor financeiro, evitar alucinações é crítico
-4. **Teste cenários reais:** Simule perguntas que um cliente faria de verdade
-5. **Seja direto no pitch:** 3 minutos passam rápido, vá ao ponto
