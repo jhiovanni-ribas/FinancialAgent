@@ -77,11 +77,11 @@ from scipy.io.wavfile import write
 import speech_recognition as sr
 from google import genai
 
-# 1. Configurações Iniciais e API
+-- 1. Configurações Iniciais e API
 MODELO_ESTAVEL = 'gemini-flash-latest'
 
-# SEGURANÇA: Buscando a chave das variáveis de ambiente do sistema
-# Para rodar localmente, você pode definir no terminal: setx GEMINI_API_KEY "sua_chave"
+-- SEGURANÇA: Buscando a chave das variáveis de ambiente do sistema
+-- Para rodar localmente, você pode definir no terminal: setx GEMINI_API_KEY "sua_chave"
 api_key = os.getenv("GEMINI_API_KEY")
 
 if not api_key:
@@ -91,7 +91,7 @@ if not api_key:
 
 client = genai.Client(api_key=api_key)
 
-# 2. Motor de Dados (RAG Local)
+-- 2. Motor de Dados (RAG Local)
 def carregar_contexto():
     """Lê a base de conhecimento para ancorar as respostas do Gemini."""
     try:
@@ -114,7 +114,7 @@ def carregar_contexto():
     except Exception as e:
         return f"Erro ao carregar base de dados: {e}"
 
-# 3. Funções de Voz (STT e TTS)
+-- 3. Funções de Voz (STT e TTS)
 def falar(texto):
     """Transforma texto em voz (1.5x) para o César."""
     print(f"FinOps Advisor: {texto}")
@@ -147,7 +147,7 @@ def ouvir_usuario():
         except:
             return None
 
-# 4. Loop de Inteligência
+-- 4. Loop de Inteligência
 system_prompt = """
 Você é o FinOps Advisor, um Controller Financeiro Sênior. 
 Trate o usuário como César. Use os dados fornecidos para dar respostas curtas e precisas.
