@@ -143,5 +143,5 @@ REGRAS CRÍTICAS:
 
 - Hierarquia de Dados: Percebi que o agente precisa ler o perfil_investidor.json antes das transações para dar o tom correto (Ex: chamar o usuário pelo nome e profissão).
 
-- Evolução da Estrutura de Comando: No início do desenvolvimento, as instruções eram passadas de forma linear e aberta, o que gerava respostas imprecisas sobre cálculos financeiros. Evoluímos para um formato de Prompt por Blocos (Role, Context, Rules, Output Format). Essa mudança foi crucial para garantir que o agente priorizasse o arquivo perfil_investidor.json como a "verdade absoluta" do tom de voz, reduzindo drasticamente as alucinações sobre a disponibilidade de saldo do César.
+- Evolução da Estrutura de Comando: No início do desenvolvimento, as instruções eram passadas de forma linear e aberta, o que gerava respostas imprecisas sobre cálculos financeiros. Evoluímos para um formato de **Prompt por Blocos (Role, Context, Rules, Output Format)**. Essa mudança foi crucial para garantir que o agente priorizasse o arquivo perfil_investidor.json como a "verdade absoluta" do tom de voz, reduzindo drasticamente as alucinações sobre a disponibilidade de saldo do César.
 
