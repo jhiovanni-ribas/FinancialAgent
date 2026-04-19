@@ -27,7 +27,7 @@ scipy
 SpeechRecognition
 ```
 
-# ETAPAS
+# 🧱 Etapas
 
 1. Preparar o Ambiente
 Recomendamos o uso de um ambiente virtual para evitar conflitos de interpretadores:
@@ -42,11 +42,14 @@ python -m venv .venv
 # Se houver erro de permissão no PowerShell:
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 ```
+
+
 2. Instalar Bibliotecas
    
 ```
 pip install -r requirements.txt
 ```
+
 
 3. Configurar API Key
 
@@ -60,7 +63,7 @@ client = genai.Client(api_key="SUA_CHAVE_AQUI")
 python main.py
 ```
 
-# Lógica de Funcionamento: RAG Local
+# 🧠 Lógica de Funcionamento: RAG Local
 O script utiliza uma técnica de RAG (Retrieval-Augmented Generation) simplificada:
 
 **Extração:** O motor de dados lê arquivos .csv e .json locais.
