@@ -1,8 +1,9 @@
 # Assets
 
-Esta pasta é destinada a recursos visuais do seu projeto:
+### 🖥️ Demonstração em Tempo Real
 
-- Diagramas de arquitetura
-- Screenshots da aplicação
-- Mockups de interface
-- Imagens para o README
+Aqui está um registro do **FinOps Advisor** em ação, realizando a análise proativa de um gasto elevado diretamente no terminal do VS Code:
+
+![Demonstração do Advisor](assets/execucao.png)
+
+> Note no terminal como o agente identifica o gasto de R$ 550,00 e emite o alerta automático sobre o teto ético de R$ 500,00.
