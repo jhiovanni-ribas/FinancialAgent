@@ -1,7 +1,7 @@
 id,data,descricao,categoria,valor,tipo
 1,2026-04-10,Mensalidade Pós-Graduação,Educação,1200.00,Saída
 2,2026-04-12,Aporte Tesouro Direto,Investimento,1500.00,Saída
-3,2026-04-14,Supermercado Curitiba,Alimentação,450.00,Saída
+3,2026-04-14,Supermercado ,Alimentação,450.00,Saída
 4,2026-04-15,Dividendos Ações,Investimento,250.00,Entrada
 5,2026-04-16,Restaurante Gourmet,Lazer,550.00,Saída
 6,2026-04-17,Assinatura API Gemini,Tecnologia,105.00,Saída
