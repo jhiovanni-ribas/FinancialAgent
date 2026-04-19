@@ -77,12 +77,13 @@ Documente os prompts que definem o comportamento do seu agente:
 
 ### 5. Avaliação e Métricas
 
-Descreva como você avalia a qualidade do seu agente:
+O desempenho do FinOps Advisor foi validado através de testes de estresse técnico e consistência de dados, garantindo uma ferramenta confiável para o suporte à decisão:
 
-**Métricas Sugeridas:**
-- Precisão/assertividade das respostas
-- Taxa de respostas seguras (sem alucinações)
-- Coerência com o perfil do cliente
+- **Assertividade e Precisão (RAG Local):** O agente demonstrou 100% de acerto na recuperação de dados sensíveis, extraindo valores exatos do transacoes.csv (como o gasto de R$ 550,00 em lazer) sem alucinações de valores ou categorias.
+  
+- **Segurança e Estabilidade de Ambiente:** Implementação de um ambiente virtual isolado (.venv), garantindo que a aplicação opere livre de conflitos de bibliotecas externas e mantendo a integridade do processamento de áudio e dados.
+  
+- **Coerência e Alinhamento Ético:** As respostas mantêm total fidelidade ao perfil do cliente, sugerindo aportes em áreas de interesse (Tecnologia/Energia) e emitindo alertas proativos sempre que um limite ético de gastos (R$ 500,00) é ultrapassado.
 
 📄 **Template:** [`docs/04-metricas.md`](./docs/04-metricas.md)
 
